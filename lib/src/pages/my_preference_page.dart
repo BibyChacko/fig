@@ -9,8 +9,36 @@ class MyPreferencePage extends StatefulWidget{
 class _MyPreferencePageState extends State<MyPreferencePage>{
   @override
   Widget build(BuildContext context){
-    return Scaffold(
-      body: Center(child: Text("My Preference page")),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("My Preference"),
+          bottom: TabBar(
+            tabs: [
+              Tab(
+                icon: Icon(Icons.file_download),
+                text: "Chat",
+              ),
+              Tab(
+                icon: Icon(Icons.file_download),
+                text: "Camera",
+              ),
+              Tab(
+                icon: Icon(Icons.file_download),
+                text: "Downlaods",
+              ),
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            Text("My Preference"),
+            Text("My Contact"),
+            Text("My Downloads")
+          ],
+        )
+      ),
     );
   }
 }

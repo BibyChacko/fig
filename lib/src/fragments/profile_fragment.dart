@@ -159,8 +159,8 @@ class _ProfileFragmentState extends State<ProfileFragment> {
             height: 80,
           ),
           Center(
-            child: Text('''Please feel free to contact us 
-             for any  queries,complainces and feedback '''),
+            child: Text('''Please feel free to contact us  \n for any  queries,complainces and feedback ''',
+              textAlign: TextAlign.center,),
           )
         ],
       ),
